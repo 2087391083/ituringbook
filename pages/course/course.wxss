@@ -1,0 +1,113 @@
+/* pages/course/course.wxss */
+
+.check{
+  font-size: 18px;
+}
+
+.uncheck{
+  font-size: 14px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15rpx;
+  background-color: #2c59b7;
+  box-sizing: border-box;
+}
+
+.navtop {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.iconfonttop {
+  display: inline-block;
+}
+
+.iconfonttop>navigator {
+  display: inline-block;
+}
+
+.navtop>image {
+  width: 180px;
+  height: 60rpx;
+}
+
+navigator>image {
+  width: 18px;
+  height: 18px;
+}
+
+/* 导航 */
+
+.navbottom {
+  width: 100%;
+  height: 30px;
+  display: inline-block;
+  font-size: 20px;
+  padding-bottom: 6px;
+  padding-right: 10px;
+  font-weight: bolder;
+  color: white;
+  line-height: 30px;
+}
+
+/* 03 */
+
+.sec03 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid gainsboro;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.sec03Right {
+  color: #2c59b7;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+}
+
+.bookitem {
+  width: 115px;
+  padding-bottom: 20px;
+}
+
+.bookitemnav {
+  display: inline-block;
+}
+
+.bookimg {
+  width: 95px;
+  height: 120px;
+}
+
+.bookname {
+  max-height: 42px;
+  max-width: 95px;
+  overflow: hidden;
+}
+
+.bookauthor,
+.booktranslator {
+  font-size: 14px;
+  color: #6b6d7a;
+  overflow: hidden;
+  max-width: 95px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+

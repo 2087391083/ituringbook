@@ -1,0 +1,88 @@
+<!--pages/bookslist/bookslist.wxml-->
+<view class="nav">
+  <view class="navtop">
+    <image src="/../imgs/logo@2x.3f0cb586.png"></image>
+    <view class="iconfonttop">
+      <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <navigator url="/pages/shopcart/shopcart">
+        <image src="/../imgs/shopcart.png"></image>
+      </navigator> 
+      <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <navigator url="/pages/search/search">
+        <image src="/../imgs/search.png"></image>
+      </navigator>
+      <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    </view>
+  </view>
+  <scroll-view scroll-x="true" scroll-view="true" class="navbottom">
+    <view wx:for="{{navnamelist}}" wx:key="{{index}}" class="navbottomview">
+      <navigator class="navre" url="/pages/bookkindlist/bookkindlist?cid={{item.cid}}">
+        <text class="navnamelist">
+        {{item.name}}
+      </text>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- sec02 -->
+<view class="sec02">
+  <swiper autoplay="true">
+    <block wx:for="{{news}}" wx:key="{{index}}">
+      <navigator url="/pages/newsdetails/newsdetails?nid={{news.nid}}">
+        <swiper-item>
+          <view>{{item.title}}</view>
+          <view class="content">{{item.content}}</view>
+        </swiper-item>
+      </navigator>
+    </block>
+  </swiper>
+</view>
+
+<!-- hotbook -->
+<view class="hotbook">
+  <view class="hotbooknav">
+    <view>
+      <image src="/../imgs/title_logo.png"></image>
+      热门图书
+    </view>
+    <navigator url="/pages/allhotbook/allhotbook">
+      <view class="hotbookmore">更多</view>
+    </navigator>
+  </view>
+  <view class="hotbookmsg">
+    <scroll-view scroll-x="true" scroll-view="true" class="hotbookmsgscroll">
+      <view wx:for="{{bookinfo}}" wx:key="{{item.bid}}" class="hotitem">
+        <navigator url="/pages/hotbookdetail/hotbookdetail?bid={{item.bid}}">
+          <image src="{{item.imgsrc}}"></image>
+          <view class="bookname">{{item.name}}</view>
+          <view class="bookauthor">{{item.author}}</view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<!--  -->
+<view class="hotbook">
+  <view class="hotbooknav">
+    <view>
+      <image src="/../imgs/title_logo.png"></image>
+      每周特价
+    </view>
+    <navigator url="/pages/tjbooklist/tjbooklist">
+      <view class="hotbookmore">更多</view>
+    </navigator>
+  </view>
+  <view class="hotbookmsg">
+    <scroll-view scroll-x="true" scroll-view="true" class="hotbookmsgscroll">
+      <view wx:for="{{tjbooklist}}" wx:key="{{item.bid}}" class="hotitem">
+        <navigator url="/pages/hotbookdetail/hotbookdetail?bid={{item.bid}}">
+          <image src="{{item.imgsrc}}"></image>
+          <view class="bookname">{{item.name}}</view>
+          <view class="bookauthor">{{item.author}}</view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>

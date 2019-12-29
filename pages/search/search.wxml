@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<view class="searchinput">
+  <form bindsubmit="getInputValue">
+    <input class="Input" name="search" value=""></input>
+    <button form-type="submit" class="Sub">搜索</button>
+  </form>
+</view>
+
+<view class="title">
+  <text decode="true">相关书籍&nbsp;&nbsp;(共{{(record==null ? 0 : record)}}条相关搜索结果)</text>
+  <view class="hr"></view>
+</view>
+
+<view class="container">
+  <view wx:for="{{resdata}}" wx:key="{{item.bid}}" class="bookitem">
+    <navigator class="bookitemnav" url='/pages/hotbookdetail/hotbookdetail?bid={{item.bid}}'>
+      <image src="{{item.imgsrc}}" class="bookimg"></image>
+      <view class="bookname">
+        {{item.name}}
+      </view>
+      <view class="bookauthor">
+        {{item.author}}
+      </view>
+    </navigator>
+  </view>
+</view>
+
+

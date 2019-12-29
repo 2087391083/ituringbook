@@ -1,0 +1,55 @@
+<!--pages/book/book.wxml-->
+<view class="nav">
+  <view class="navtop">
+    <image src="/../imgs/logo@2x.3f0cb586.png"></image>
+    <view class="iconfonttop">
+      <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <navigator url="/pages/shopcart/shopcart">
+        <image src="/../imgs/shopcart.png"></image>
+      </navigator>
+      <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <navigator url="/pages/search/search">
+        <image src="/../imgs/search.png"></image>
+      </navigator>
+      <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    </view>
+  </view>
+  <scroll-view scroll-x="true" scroll-view="true" class="navbottom">
+    <view wx:for="{{navnamelist}}" id="{{item.mid}}" wx:key="{{index.mid}}" bindtap="navclicklist" class="navbottomview">
+      <text class="navnamelist {{navTopId == curNavId ? 'navcheck' : 'navuncheck'}}">
+          {{item.name}}
+      </text>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- 03 -->
+<view class="sec03">
+  <view class="sec03Left">
+    <text id="1" class="{{navId=='1'? 'check' : 'uncheck'}}" bindtap="uptodate">最新</text>
+    <text decode="true">&nbsp;&nbsp;&nbsp;</text>
+    <text id="2" class="{{navId=='2'? 'check' : 'uncheck'}}" bindtap="hot">热门</text>
+    <text decode="true">&nbsp;&nbsp;&nbsp;</text>
+    <text id="3" class="{{navId=='3'? 'check' : 'uncheck'}}" bindtap="recommend">推荐</text>
+  </view>
+  <view class="sec03Right">更多筛选</view>
+</view>
+
+<!-- 内容 -->
+<view class="container">
+  <view wx:for="{{objdata}}" wx:key="{{item.bid}}" class="bookitem">
+    <navigator class="bookitemnav" url='/pages/hotbookdetail/hotbookdetail?bid={{item.bid}}'>
+      <image src="{{item.imgsrc}}" class="bookimg"></image>
+      <view class="bookname">
+        {{item.name}}
+      </view>
+      <view class="bookauthor">
+        {{item.author}}
+      </view>
+      <view class="booktranslator">
+        {{item.translator}}
+        <text decode="true">&nbsp;&nbsp;译</text>
+      </view>
+    </navigator>
+  </view>
+</view>

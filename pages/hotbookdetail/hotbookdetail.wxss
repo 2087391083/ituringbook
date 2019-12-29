@@ -1,0 +1,17 @@
+/* pages/hotbookdetail/hotbookdetail.wxss */
+.container{
+  width: 100%;
+  padding: 10px auto 15px 15px;
+}
+.imgview{
+  width: 100%;
+  text-align: center;
+}
+.img{
+  width: 200px;
+}
+.content{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}

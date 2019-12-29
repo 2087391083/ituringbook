@@ -1,0 +1,13 @@
+<!--pages/me/me.wxml-->
+<view class="container {{isLogin ? 'btnhidden' : 'btnshow'}}">
+  <button class="btn" form-type="submit" bindgetuserinfo="getWarrant" open-type="getUserInfo">登录</button>
+</view>
+<view class="usermsg {{isLogin ? 'btnshow' : 'btnhidden'}}">
+  <view class="avatarview  {{isLogin ? 'btnshow' : 'btnhidden'}}">
+    <image src="{{avatarUrl}}" class="avatar"></image>
+  </view>
+  <view class="nickname  {{isLogin ? 'btnshow' : 'btnhidden'}}">昵称：{{nickName}}</view>
+</view>
+<view class="userly" bindtap="userLy">
+  用户留言
+</view>

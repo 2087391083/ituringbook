@@ -1,0 +1,23 @@
+<!--pages/hotbookdetail/hotbookdetail.wxml-->
+<view class="container">
+  <view class="imgview">
+    <image class="img" src="{{detailObj.imgsrc}}"></image>
+  </view>
+  <view class="content">
+    <view>
+      <text style="font-weight:800">名称</text>:{{detailObj.name}}
+    </view>
+    <view><text decode="true">\n</text></view>
+    <view>
+      <text style="font-weight:800">作者</text>：{{detailObj.author}}
+    </view>
+    <view><text decode="true">\n</text></view>
+    <view>
+      <text style="font-weight:800">出版时间</text>：{{detailObj.publish}}
+    </view>
+    <view><text decode="true">\n</text></view>
+    <view>
+      <text style="font-weight:800">描述</text>：{{detailObj.description}}
+    </view>
+  </view>
+</view>

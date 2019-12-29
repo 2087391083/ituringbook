@@ -1,0 +1,10 @@
+<!--pages/userleava/userleava.wxml-->
+<view class="container">
+  <view class="content"> 
+    <form bindsubmit="leaveSub">
+      <text style="font-size:18px;">留言版：</text>
+      <textarea name="userleava" class="userleava" placeholder="请输入留言内容"></textarea>
+      <button form-type="submit" class="leava">发表</button>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/book/book",
+    "pages/me/me",
+    "pages/hotbookdetail/hotbookdetail",
+    "pages/course/course",
+    "pages/search/search",
+    "pages/bookslist/bookslist",
+    "pages/viewpoint/viewpoint",
+    "pages/shopcart/shopcart",
+    "pages/newsdetails/newsdetails",
+    "pages/allhotbook/allhotbook",
+    "pages/bookkindlist/bookkindlist",
+    "pages/tjbooklist/tjbooklist",
+    "pages/userleava/userleava"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#13227a",
+    "navigationBarTitleText": "图灵社区",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#13227a",
+    "list": [
+      {
+        "pagePath": "pages/bookslist/bookslist",
+        "text": "首页",
+        "iconPath": "./imgs/index1.png",
+        "selectedIconPath": "./imgs/index2.png"
+      },
+      {
+        "pagePath": "pages/book/book",
+        "text": "图书",
+        "iconPath": "./imgs/book1.png",
+        "selectedIconPath": "./imgs/book2.png"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "text": "课程",
+        "iconPath": "./imgs/class1.png",
+        "selectedIconPath": "./imgs/class2.png"
+      },
+      {
+        "pagePath": "pages/viewpoint/viewpoint",
+        "text": "观点",
+        "iconPath": "./imgs/viewpoint1.png",
+        "selectedIconPath": "./imgs/viewpoint2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./imgs/my1.png",
+        "selectedIconPath": "./imgs/my2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

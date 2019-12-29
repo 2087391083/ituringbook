@@ -1,0 +1,9 @@
+<!--pages/viewpoint/viewpoint.wxml-->
+<view>
+  <text style="font-weight:800">用户留言内容</text>
+</view>
+<view>
+  <view wx:for="{{leavaContent}}" wx:key="{{index}}">
+    <text style="font-weight:800">留言{{index+1}}</text>：{{item.content}}
+  </view>
+</view>

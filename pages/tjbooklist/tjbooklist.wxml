@@ -1,0 +1,22 @@
+<!--pages/tjbooklist/tjbooklist.wxml-->
+<view class="title">
+  <text>每周特价</text>
+  <view class="hr"></view>
+</view>
+<view class="container">
+  <view wx:for="{{tjbooklist}}" wx:key="{{item.bid}}" class="bookitem">
+    <navigator class="bookitemnav" url='/pages/hotbookdetail/hotbookdetail?bid={{item.bid}}'>
+      <image src="{{item.imgsrc}}" class="bookimg"></image>
+      <view class="bookname">
+        {{item.name}}
+      </view>
+      <view class="bookauthor">
+        {{item.author}}
+      </view>
+      <view class="booktranslator">
+        {{item.translator}}
+        <text decode="true">&nbsp;&nbsp;译</text>
+      </view>
+    </navigator>
+  </view>
+</view>

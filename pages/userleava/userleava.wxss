@@ -1,0 +1,23 @@
+/* pages/userleava/userleava.wxss */
+.container{
+  width: 100vw;
+  height: 100vh;
+}
+.content{
+  width: 100%;
+  height: 140px;
+  margin-top: 30px;
+  padding-left: 60px;
+  }
+  .userleava{
+    padding-top: 5px;
+    border: 1px solid gainsboro;
+    width: 250px;
+    height: 120px;
+  }
+  .leava{
+    width: 150px;
+    margin-top: 20px;
+    display: inline-block;
+    margin-left: 50px;
+  }
